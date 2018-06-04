@@ -12,7 +12,8 @@ matrix:
     - os: osx
       jdk: oraclejdk8
       osx_image: xcode8
-  env:
+env:
+  matrix:
     - NODE_VERSION=7 CC=clang CXX=clang++
     - NODE_VERSION=6 CC=clang CXX=clang++
     - NODE_VERSION=4 CC=clang CXX=clang++
