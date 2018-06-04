@@ -12,10 +12,10 @@ matrix:
     - os: osx
       jdk: oraclejdk8
       osx_image: xcode8
-env:
-  - NODE_VERSION=7 CC=clang CXX=clang++
-  - NODE_VERSION=6 CC=clang CXX=clang++
-  - NODE_VERSION=4 CC=clang CXX=clang++
+  env:
+    - NODE_VERSION=7 CC=clang CXX=clang++
+    - NODE_VERSION=6 CC=clang CXX=clang++
+    - NODE_VERSION=4 CC=clang CXX=clang++
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install nvm; fi
   - nvm install $NODE_VERSION
