@@ -19,6 +19,7 @@ env:
 before_install:
   - nvm install $NODE_VERSION
 before_script:
+  - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install yarn; fi
   - npm install
 script:
   - npm test
