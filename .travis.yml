@@ -1,16 +1,12 @@
 language: java
 sudo: false
-matrix:
-  include:
-    #- os: linux
-    #  jdk: oraclejdk7
-    #- os: linux
-    #  jdk: oraclejdk8
-    #- os: osx
-    #  jdk: oraclejdk7
-    #  osx_image: xcode8
-    - os: osx
-      osx_image: xcode8
+include:
+  - os: linux
+    jdk: oraclejdk7
+  - os: linux
+    jdk: oraclejdk8
+  - os: osx
+    osx_image: xcode8
 env:
   matrix:
     - NODE_VERSION=7 CC=clang CXX=clang++
